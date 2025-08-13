@@ -1,0 +1,155 @@
+/* src/components/Menu.css */
+.menu-container {
+  text-align: center;
+}
+
+.menu-container h2 {
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.menu-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  flex: 2;
+}
+
+.dish-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dish-card.selected {
+  border: 2px solid #e67e22;
+  transform: translateY(-5px);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dish-card h3 {
+  margin: 15px 0 5px;
+  color: #2c3e50;
+}
+
+.dish-card p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.detail-link {
+  display: inline-block;
+  margin: 15px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.detail-link:hover {
+  background-color: #2980b9;
+}
+
+.dish-description {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: left;
+  position: sticky;
+  top: 20px;
+}
+
+.dish-description h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 10px;
+}
+
+.description-content {
+  display: flex;
+  gap: 20px;
+}
+
+.description-content img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.description-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.view-full-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.view-full-link:hover {
+  background-color: #d35400;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .menu-layout {
+    flex-direction: column;
+  }
+  
+  .dish-description {
+    position: static;
+    margin-top: 20px;
+  }
+  
+  .description-content {
+    flex-direction: column;
+  }
+  
+  .description-content img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dishes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+}
