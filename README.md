@@ -2,7 +2,7 @@
 
 Esta es una aplicación web para un restaurante llamada "SaborCasero" desarrollada con React.js.
 
-## Características
+## Características 11111
 
 - Interfaz de usuario interactiva y responsiva
 - Navegación entre páginas usando React Router
